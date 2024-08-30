@@ -57,7 +57,7 @@ export default class Calculator extends Component {
 
     addDigit(n) {
         
-        if (n === '.' && this.state.displayValue) { // regra para evitar ter dois pontos na calculadora 
+        if (n === '.' && this.state.displayValue.includes('.')) { // regra para evitar ter dois pontos na calculadora 
             return
         }
             const clearDisplay = this.state.displayValue === '0'
